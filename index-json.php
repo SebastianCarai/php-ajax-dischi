@@ -20,6 +20,17 @@
 
         <main>
             <div class="my_container">
+                <!-- Select Genre -->
+                <div class="select_genres">
+                    <span>Seleziona genere: </span>
+                    <select v-model="selectedGenre" @change="axiosCall">
+                        <option value="">All</option>
+                        <option v-for="(singleGenre, index) in genresArray" :key="index" :value="singleGenre">{{singleGenre}}</option>
+                    </select>
+                </div>
+                <!-- End Select Genre -->
+
+                <!-- Albums -->
                 <div class="d-flex flex-wrap">
                     <div class="single_disk" v-for="(disk,index) in disksArray" :key="index">
                         <img :src="disk.poster" alt="">
@@ -28,6 +39,7 @@
                         <div class="album_date mb-4">{{disk.year}} </div>
                     </div>
                 </div>
+                <!-- End Albums -->
             </div>
         </main>
     </div>

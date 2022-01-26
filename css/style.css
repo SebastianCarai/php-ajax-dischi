@@ -29,6 +29,14 @@ main{
     margin: auto;
     padding: 80px 0;
 }
+/* Select genres */
+.select_genres{
+    color: white;
+}
+.select_genres select{
+    padding: 3px 8px;
+}
+/* Disk */
 .single_disk{
     padding: 10px;
     background-color: #2e3a46;
