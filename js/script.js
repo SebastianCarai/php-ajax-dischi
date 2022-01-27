@@ -4,7 +4,6 @@ const app= new Vue({
     el: "#root",
     data:{
         disksArray: [],
-        genresArray: [],
         selectedGenre: ''
     },
     methods:{
@@ -18,11 +17,6 @@ const app= new Vue({
             .then((response) =>{
                 console.log(response)
                 this.disksArray = response.data;
-                this.disksArray.forEach(element => {
-                    if (!this.genresArray.includes(element.genre)){
-                        this.genresArray.push(element.genre);
-                    }
-                });
             })
         },
     },
